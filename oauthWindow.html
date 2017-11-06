@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+	<div id="msgLbl">Loading...</div>
+    <script type="text/javascript">
+    
+      document.domain = 'oasgames.com';
+
+      var _p = function(data){
+  		if(window.console) window.console.info(data);
+  	  };
+    
+      if (window.opener && window.opener.oauth2 && window.opener.oauth2.__doLogin) {
+
+  			window.opener.oauth2.__doLogin(location.hash);
+      		
+      }else if(window.parent && window.parent.oauth2 && window.parent.oauth2.__doLogin){
+          
+    	    window.parent.oauth2.__doLogin(location.hash);
+      		
+      }else{
+          
+    	 	 _p('window.opener');
+    		if(typeof(window.opener) != 'undefined' && window.opener != null){
+    			_p(window.opener.location);
+    		}
+
+    		_p('window.parent');
+    		if(typeof(window.parent) != 'undefined'){
+    			_p(window.parent.location.href);
+    		}
+
+    		_p('window.refer');
+    		_p(document.referrer);
+
+            
+      		document.getElementById('msgLbl').innerHTML = "Your browser seems to be stopping this window from communicating with the main window.";
+
+      }
+    </script>
+  
+  </body>
+</html>

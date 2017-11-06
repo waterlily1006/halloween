@@ -1,0 +1,27 @@
+{
+	"ret": true,
+	"data":{
+		"sImg_list":[
+			{
+				"src": "imgs/img_boss_01_small.jpg",
+				"finish":true
+			},
+			{   
+				"src": "imgs/img_boss_02_small.jpg",
+				"finish":false
+			},
+			{   
+				"src": "imgs/img_boss_03_small.jpg",
+				"finish":false
+			},
+			{   
+				"src": "imgs/img_boss_04_small.jpg",
+				"finish":false
+			},
+			{   
+				"src": "imgs/img_boss_05_small.jpg",
+				"finish":false
+			}
+		]
+	}
+}

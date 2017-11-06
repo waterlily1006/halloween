@@ -1,0 +1,27 @@
+$(window).load(function(){
+    var page=0;
+    $('next').click(function(){
+        page++;
+        if(page>3)page=3;
+        if(page>0)$('prev').show();
+        if(page<3)$('next').show();
+        if(page==0)$('prev').hide();
+        if(page==3)$('next').hide();
+        $('.page1').animate({'margin-top':-page*1080});
+    });
+    $('.more_btn').click(function(){
+        page=3;
+        $('prev').show();
+        $('next').hide();
+        $('.page1').animate({'margin-top':-page*1080});
+    });
+    $('prev').click(function(){
+        page--;
+        if(page<0)page=0;
+        if(page>0)$('prev').show();
+        if(page<3)$('next').show();
+        if(page==0)$('prev').hide();
+        if(page==3)$('next').hide();
+        $('.page1').animate({'margin-top':-page*1080});
+    })
+});
